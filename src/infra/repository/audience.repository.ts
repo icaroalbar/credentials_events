@@ -3,7 +3,7 @@ import { Audience } from "../../core/audience/domain/audience.entity";
 import { AudienceGateway } from "../../core/audience/domain/application/audience.gateway";
 import { AudienceEntity } from "../entities/audience.entity";
 import { randomUUID } from "node:crypto";
-import AppDataSource from "../database/data-source.js";
+import AppDataSource from "../database/data-source";
 
 export class AudienceRepository implements AudienceGateway {
   private repository: Repository<AudienceEntity>;
