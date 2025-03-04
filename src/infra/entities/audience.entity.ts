@@ -1,4 +1,9 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  UpdateDateColumn,
+} from "typeorm";
 import { AddressValueObject } from "../../core/audience/domain/value-objects/address/address.valueobject";
 import { CRMValueObject } from "../../core/audience/domain/value-objects/crm/crm.valueobject";
 
@@ -39,4 +44,7 @@ export class AudienceEntity {
 
   @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP" })
   createdAt!: Date;
+
+  @UpdateDateColumn()
+  updatedAt: Date;
 }
